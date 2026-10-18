@@ -1,0 +1,227 @@
+[
+  {
+    "chunk_id": "AAPL_10-K_2023_fixed_0",
+    "document_id": "AAPL_10-K_2023",
+    "text": "ITEM 1. BUSINESS Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories, and sells a variety of related services. Products include iPhone, Mac, iPad, and Wearables, Home and Accessories. Services include Advertising, AppleCare, Cloud Services, Digital Content, and Payment Services. ITEM 1A. RISK FACTORS Global economic conditions, geopolitical conflicts, and trade disputes could adversely affect the Company's business. In particular, substantially all of the Company's manufacturing is performed by outsourced partners located primarily in Asia, including mainland China, India, and Vietnam. Any disruption at these manufacturing facilities could severely limit supply. ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS Total net sales decreased 3% or $11.0 billion during 2023 compared to 2022. Products net sales decreased due to lower sales of Mac and iPad. Services net sales increased 9% driven by growth in advertising, App Store, and cloud services. Research and development expense was $29,915 million in 2023, compared to $26,251 million in 2022, representing an increase of 14% to support next-generation silicon, AI technologies, and visionOS platform development. ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA Consolidated Statements of Operations (in millions): | Net Sales by Category | 2023 | 2022 | 2021 | | --- | --- | --- | --- | | iPhone | $ 200,583 | $ 205,489 | $ 191,973 | | Mac | $ 29,357 | $ 40,177 | $ 35,190 | | iPad | $ 28,300 | $ 29,292 | $ 31,862 | | Wearables, Home and Accessories | $ 39,845 | $ 41,241 | $ 38,367 | | Services | $ 85,200 | $ 78,129 | $ 68,425 | | Total net sales | $ 383,285 | $ 394,328 | $ 365,817 | | Total cost of sales | $ 214,137 | $ 223,546 | $ 212,981 | | Gross margin | $ 169,148 | $ 170,782 | $ 152,836 | | Operating income | $ 114,301 | $ 119,437 | $ 108,949 |",
+    "metadata": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "AAPL_Transcript_Q3_2023_fixed_0",
+    "document_id": "AAPL_Transcript_Q3_2023",
+    "text": "EXECUTIVE REMARKS & PRESENTATION: Tim Cook (CEO): Good afternoon, everyone. Today Apple is reporting revenue of $81.8 billion for the June quarter. We hit an all-time revenue record in India, growing strong double digits, driven by robust iPhone adoption and the opening of our first two retail stores in Mumbai and Delhi. We continue to invest heavily in artificial intelligence and machine learning, which are foundational technologies woven into virtually every product we build. Luca Maestri (CFO): Our Services revenue set an all-time record of $21.2 billion, up 8% year-over-year. We reached over 1 billion paid subscriptions across the services on our platform. QUESTION AND ANSWER SECTION: Shannon Cross (Analyst): Tim, can you discuss the trajectory of AI spending and silicon development? Tim Cook: We view AI and ML as fundamental core technologies, and we have been doing research across a wide range of AI technologies, including generative AI, for years.",
+    "metadata": {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "Transcript",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": false,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "MSFT_10-K_2023_fixed_0",
+    "document_id": "MSFT_10-K_2023",
+    "text": "ITEM 1. BUSINESS Microsoft develops and supports software, services, devices, and solutions. Our three operating segments are Productivity and Business Processes, Intelligent Cloud, and More Personal Computing. ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS Revenue increased $13.7 billion or 7% driven by growth in Intelligent Cloud and Productivity and Business Processes. Operating income increased 6% to $88,523 million. ITEM 8. FINANCIAL STATEMENTS | Segment Revenue (in millions) | 2023 | 2022 | | --- | --- | --- | | Productivity and Business Processes | $ 69,274 | $ 63,364 | | Intelligent Cloud | $ 87,907 | $ 75,251 | | More Personal Computing | $ 54,734 | $ 59,579 | | Total Revenue | $ 211,915 | $ 198,194 | | Operating income | $ 88,523 | $ 83,383 | | Net income | $ 72,361 | $ 72,738 |",
+    "metadata": {
+      "ticker": "MSFT",
+      "company": "Microsoft Corp",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "MSFT_Transcript_Q3_2023_fixed_0",
+    "document_id": "MSFT_Transcript_Q3_2023",
+    "text": "EXECUTIVE REMARKS & PRESENTATION: Satya Nadella (CEO): We had a tremendous close to the fiscal year. Microsoft Cloud annual revenue surpassed $110 billion, up 27% in constant currency. Azure OpenAI Service now has more than 11,00 organizations using the service, up from 4,500 just last quarter. Organizations are choosing Azure because of our leading infrastructure and enterprise-grade security. QUESTION AND ANSWER SECTION: Mark Murphy (Analyst): Satya, what is the impact of Copilot monetization? Satya Nadella: Copilot is being rapidly adopted across GitHub, Microsoft 365, and Power Platform. GitHub Copilot has over 1 million paying users.",
+    "metadata": {
+      "ticker": "MSFT",
+      "company": "Microsoft Corp",
+      "fiscal_year": 2023,
+      "doc_type": "Transcript",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": false,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "NVDA_10-K_2024_fixed_0",
+    "document_id": "NVDA_10-K_2024",
+    "text": "ITEM 1. BUSINESS NVIDIA pioneered accelerated computing to help solve the most challenging computational problems. We specialize in GPUs, DPUs, and full-stack software platforms powering AI supercomputing. ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS Fiscal year 2024 was a transformative year. Total revenue increased 126% to $60,922 million, driven by exceptional growth in our Data Center platform following the enterprise inflection point for generative AI. Gross margin expanded significantly to 72.7% from 56.9% in fiscal 2023, reflecting higher Data Center architecture sales. ITEM 8. FINANCIAL STATEMENTS | Revenue by Platform (in millions) | 2024 | 2023 | | --- | --- | --- | | Data Center | $ 47,525 | $ 15,013 | | Gaming | $ 10,447 | $ 9,067 | | Professional Visualization | $ 1,553 | $ 1,544 | | Automotive | $ 1,091 | $ 903 | | OEM and Other | $ 306 | $ 447 | | Total revenue | $ 60,922 | $ 26,974 | | Gross margin | 72.7% | 56.9% | | Operating income | $ 32,972 | $ 4,224 |",
+    "metadata": {
+      "ticker": "NVDA",
+      "company": "NVIDIA Corp",
+      "fiscal_year": 2024,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "NVDA_Transcript_Q3_2024_fixed_0",
+    "document_id": "NVDA_Transcript_Q3_2024",
+    "text": "EXECUTIVE REMARKS & PRESENTATION: Jensen Huang (CEO): Accelerated computing and generative AI have reached the tipping point. Demand is surging worldwide across companies, industries and nations. Our Data Center platform is powered by increasingly diverse drivers \u2014 demand for data processing, training and inference from large cloud service providers and GPU specialized providers, as well as from enterprise software and consumer internet companies. QUESTION AND ANSWER SECTION: Toshiya Hari (Analyst): Jensen, how do you see Blackwell transition impacting supply? Jensen Huang: The demand for Blackwell is incredible. Supply will be constrained through the coming fiscal year as customer demand exceeds available capacity.",
+    "metadata": {
+      "ticker": "NVDA",
+      "company": "NVIDIA Corp",
+      "fiscal_year": 2024,
+      "doc_type": "Transcript",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": false,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "GOOGL_10-K_2023_fixed_0",
+    "document_id": "GOOGL_10-K_2023",
+    "text": "ITEM 1. BUSINESS Alphabet is a collection of businesses \u2014 the largest of which is Google. Google segments include Google Services and Google Cloud. ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS Google Cloud demonstrated strong operating leverage, achieving operating income of $1,716 million in 2023 compared to an operating loss of $(1,864) million in 2022. ITEM 8. FINANCIAL STATEMENTS | Revenues and Operating Income (in millions) | 2023 | 2022 | | --- | --- | --- | | Google Search & other | $ 175,032 | $ 162,450 | | YouTube ads | $ 31,510 | $ 29,242 | | Google Network | $ 31,315 | $ 32,780 | | Google advertising | $ 237,857 | $ 224,472 | | Google Services total | $ 272,504 | $ 253,528 | | Google Cloud | $ 33,088 | $ 26,280 | | Other Bets | $ 1,527 | $ 1,068 | | Total revenues | $ 307,394 | $ 282,836 | | Google Cloud operating income (loss) | $ 1,716 | $ (1,864) |",
+    "metadata": {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "AMZN_10-K_2023_fixed_0",
+    "document_id": "AMZN_10-K_2023",
+    "text": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS Net sales increased 12% to $574,785 million in 2023. AWS segment sales were $90,764 million in 2023, compared to $80,096 million in 2022. North America operating income was $14,877 million in 2023, compared to an operating loss of $(2,847) million in 2022. ITEM 8. FINANCIAL STATEMENTS | Segment Information (in millions) | 2023 | 2022 | | --- | --- | --- | | North America sales | $ 352,828 | $ 315,880 | | International sales | $ 131,193 | $ 118,007 | | AWS sales | $ 90,764 | $ 80,096 | | Total net sales | $ 574,785 | $ 513,983 | | Operating income | $ 36,852 | $ 12,248 |",
+    "metadata": {
+      "ticker": "AMZN",
+      "company": "Amazon.com Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "META_10-K_2023_fixed_0",
+    "document_id": "META_10-K_2023",
+    "text": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS In 2023, ad impressions delivered across our Family of Apps increased by 28% year-over-year. Reality Labs expenses were $17.97 billion, resulting in an operating loss of $(16,120) million. ITEM 8. FINANCIAL STATEMENTS | Consolidated Financial Highlights (in millions) | 2023 | 2022 | | --- | --- | --- | | Family of Apps revenue | $ 133,015 | $ 114,450 | | Reality Labs revenue | $ 1,896 | $ 2,159 | | Total revenue | $ 134,902 | $ 116,609 | | Reality Labs operating loss | $ (16,120) | $ (13,717) | | Net income | $ 39,098 | $ 23,200 |",
+    "metadata": {
+      "ticker": "META",
+      "company": "Meta Platforms Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "TSLA_10-K_2023_fixed_0",
+    "document_id": "TSLA_10-K_2023",
+    "text": "ITEM 7. MD&A Automotive regulatory credits accounted for $1,790 million in 2023 compared to $1,607 million in 2022. Total automotive gross margin was 18.2% in 2023. ITEM 8. FINANCIAL STATEMENTS | Revenues (in millions) | 2023 | 2022 | | --- | --- | --- | | Total automotive revenues | $ 82,419 | $ 71,462 | | Automotive regulatory credits | $ 1,790 | $ 1,607 | | Energy generation and storage | $ 6,035 | $ 3,909 | | Services and other | $ 8,319 | $ 6,091 | | Total revenues | $ 96,773 | $ 81,462 |",
+    "metadata": {
+      "ticker": "TSLA",
+      "company": "Tesla Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "JPM_10-K_2023_fixed_0",
+    "document_id": "JPM_10-K_2023",
+    "text": "ITEM 8. FINANCIAL STATEMENTS | Consolidated Financial Results (in millions) | 2023 | 2022 | | --- | --- | --- | | Net interest income | $ 89,267 | $ 66,710 | | Noninterest revenue | $ 68,834 | $ 61,913 | | Total net revenue - managed | $ 162,368 | $ 132,279 | | Total assets | $ 3,875,393 | $ 3,665,743 | | Net income | $ 49,552 | $ 37,676 |",
+    "metadata": {
+      "ticker": "JPM",
+      "company": "JPMorgan Chase & Co.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "BAC_10-K_2023_fixed_0",
+    "document_id": "BAC_10-K_2023",
+    "text": "ITEM 8. FINANCIAL STATEMENTS | Financial Highlights (in millions) | 2023 | 2022 | | --- | --- | --- | | Total revenue, net of interest expense | $ 98,581 | $ 94,950 | | Net income | $ 26,515 | $ 27,528 |",
+    "metadata": {
+      "ticker": "BAC",
+      "company": "Bank of America Corp",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "JNJ_10-K_2023_fixed_0",
+    "document_id": "JNJ_10-K_2023",
+    "text": "ITEM 8. FINANCIAL STATEMENTS | Sales by Segment (in millions) | 2023 | 2022 | | --- | --- | --- | | Innovative Medicine | $ 54,759 | $ 52,563 | | MedTech | $ 30,400 | $ 27,427 | | Total sales | $ 85,159 | $ 79,990 |",
+    "metadata": {
+      "ticker": "JNJ",
+      "company": "Johnson & Johnson",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "V_10-K_2023_fixed_0",
+    "document_id": "V_10-K_2023",
+    "text": "ITEM 7. MD&A During fiscal 2023, payments volume grew 9% on a constant-dollar basis, and cross-border volume excluding intra-Europe transactions grew 20%. ITEM 8. FINANCIAL STATEMENTS | Operating Results (in millions) | 2023 | 2022 | | --- | --- | --- | | Net revenues | $ 32,653 | $ 29,310 | | Operating income | $ 21,957 | $ 19,813 |",
+    "metadata": {
+      "ticker": "V",
+      "company": "Visa Inc.",
+      "fiscal_year": 2023,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  },
+  {
+    "chunk_id": "WMT_10-K_2024_fixed_0",
+    "document_id": "WMT_10-K_2024",
+    "text": "ITEM 7. MD&A Global eCommerce sales increased 23% in fiscal 2024, surpassing $100 billion. Walmart U.S. comp sales grew 5.6%. ITEM 8. FINANCIAL STATEMENTS | Revenues (in millions) | 2024 | 2023 | | --- | --- | --- | | Net sales | $ 642,637 | $ 605,881 | | Membership and other income | $ 5,488 | $ 5,408 | | Total revenues | $ 648,125 | $ 611,289 | | Operating income | $ 27,011 | $ 20,428 |",
+    "metadata": {
+      "ticker": "WMT",
+      "company": "Walmart Inc.",
+      "fiscal_year": 2024,
+      "doc_type": "10-K",
+      "chunking_strategy": "fixed",
+      "chunk_index": 0,
+      "is_table": true,
+      "section_title": "Unknown (Fixed Split)"
+    }
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "fixed_size_baseline": {
+    "strategy": "Fixed-Size (512 tokens / 50 overlap)",
+    "total_chunks": 15,
+    "avg_tokens": 121.5,
+    "std_tokens": 68.5,
+    "min_tokens": 45,
+    "max_tokens": 330,
+    "table_chunks_count": 12,
+    "severed_tables_count": 12,
+    "table_sever_rate_pct": 100.0,
+    "header_attachment_rate_pct": 0.0
+  },
+  "section_aware": {
+    "strategy": "Section-Aware + Atomic Tables",
+    "total_chunks": 44,
+    "avg_tokens": 51.2,
+    "std_tokens": 33.4,
+    "min_tokens": 14,
+    "max_tokens": 150,
+    "table_chunks_count": 12,
+    "severed_tables_count": 0,
+    "table_sever_rate_pct": 0.0,
+    "header_attachment_rate_pct": 100.0
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "document_id": "V_10-K_2023",
+  "metadata": {
+    "ticker": "V",
+    "company": "Visa Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_Intro",
+      "title": "Introductory Information",
+      "content": "ITEM 7. MD&A\n\nDuring fiscal 2023, payments volume grew 9% on a constant-dollar basis, and cross-border volume excluding intra-Europe transactions grew 20%.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_1",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Operating Results (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Net revenues | $ 32,653 | $ 29,310 |\n| Operating income | $ 21,957 | $ 19,813 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 7. MD&A\n\nDuring fiscal 2023, payments volume grew 9% on a constant-dollar basis, and cross-border volume excluding intra-Europe transactions grew 20%.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Operating Results (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Net revenues | $ 32,653 | $ 29,310 |\n| Operating income | $ 21,957 | $ 19,813 |\n\n\n"
+}

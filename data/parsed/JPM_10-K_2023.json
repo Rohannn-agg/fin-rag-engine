@@ -1,0 +1,18 @@
+{
+  "document_id": "JPM_10-K_2023",
+  "metadata": {
+    "ticker": "JPM",
+    "company": "JPMorgan Chase & Co.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Consolidated Financial Results (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Net interest income | $ 89,267 | $ 66,710 |\n| Noninterest revenue | $ 68,834 | $ 61,913 |\n| Total net revenue - managed | $ 162,368 | $ 132,279 |\n| Total assets | $ 3,875,393 | $ 3,665,743 |\n| Net income | $ 49,552 | $ 37,676 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Consolidated Financial Results (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Net interest income | $ 89,267 | $ 66,710 |\n| Noninterest revenue | $ 68,834 | $ 61,913 |\n| Total net revenue - managed | $ 162,368 | $ 132,279 |\n| Total assets | $ 3,875,393 | $ 3,665,743 |\n| Net income | $ 49,552 | $ 37,676 |\n\n\n"
+}

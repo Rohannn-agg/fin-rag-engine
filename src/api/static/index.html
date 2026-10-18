@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LSEG Financial Document RAG Engine</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    body { background-color: #0f172a; color: #f8fafc; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.08); }
+    .table-container table { width: 100%; border-collapse: collapse; font-size: 0.85rem; margin: 0.75rem 0; }
+    .table-container th { background: #334155; padding: 6px 12px; text-align: left; border: 1px solid #475569; }
+    .table-container td { padding: 6px 12px; border: 1px solid #334155; }
+    .table-container tr:nth-child(even) { background: rgba(51, 65, 85, 0.3); }
+    .custom-scroll::-webkit-scrollbar { width: 6px; }
+    .custom-scroll::-webkit-scrollbar-track { background: transparent; }
+    .custom-scroll::-webkit-scrollbar-thumb { background: #475569; border-radius: 4px; }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- Header -->
+  <header class="border-b border-slate-800 bg-slate-900/80 px-6 py-4 flex items-center justify-between sticky top-0 z-50">
+    <div class="flex items-center space-x-3">
+      <div class="h-9 w-9 rounded-lg bg-blue-600 flex items-center justify-center text-white shadow-lg shadow-blue-500/20 font-bold text-lg">
+        <i class="fa-solid fa-chart-line"></i>
+      </div>
+      <div>
+        <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
+          LSEG Financial RAG Engine
+          <span class="text-xs bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded-full font-mono">v1.0.0</span>
+        </h1>
+        <p class="text-xs text-slate-400">SEC 10-K/10-Q & Earnings Call Intelligence System</p>
+      </div>
+    </div>
+    <div class="flex items-center space-x-4">
+      <span id="health-badge" class="text-xs bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2.5 py-1 rounded-full flex items-center gap-1.5 font-mono">
+        <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        Ready
+      </span>
+      <button onclick="toggleAblationModal()" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1.5 rounded-lg border border-slate-700 transition flex items-center gap-2">
+        <i class="fa-solid fa-flask"></i> Benchmark Ablations
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="flex-1 max-w-7xl w-full mx-auto p-6 grid grid-cols-1 lg:grid-cols-12 gap-6">
+
+    <!-- Left Controls & Query Column -->
+    <div class="lg:col-span-5 space-y-6">
+
+      <!-- Query Box Card -->
+      <div class="glass rounded-xl p-5 shadow-xl space-y-4">
+        <label class="block text-xs font-semibold uppercase tracking-wider text-slate-400">Natural Language Financial Query</label>
+        <div class="relative">
+          <textarea id="query-input" rows="3" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-3 text-sm text-slate-100 placeholder-slate-500 focus:outline-none focus:border-blue-500 transition" placeholder="e.g. What was Apple's R&D spend in fiscal 2023?"></textarea>
+          <button id="clear-btn" onclick="clearQuery()" class="absolute right-3 top-3 text-slate-500 hover:text-slate-300 text-xs">Clear</button>
+        </div>
+
+        <!-- Sample Query Suggestions -->
+        <div class="space-y-1.5">
+          <span class="text-[11px] text-slate-400 font-medium">Quick Prompts:</span>
+          <div class="flex flex-wrap gap-1.5">
+            <button onclick="setQuery('What was Apple\\'s R&D spend in fiscal 2023?')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded border border-slate-700/60 transition">AAPL 2023 R&D</button>
+            <button onclick="setQuery('What was NVIDIA\\'s total revenue and gross margin for fiscal 2024?')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded border border-slate-700/60 transition">NVDA 2024 Margin</button>
+            <button onclick="setQuery('What was Microsoft Intelligent Cloud revenue in 2023?')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded border border-slate-700/60 transition">MSFT Cloud 2023</button>
+            <button onclick="setQuery('What was Amazon AWS net sales in 2023?')" class="text-[11px] bg-slate-800 hover:bg-slate-700 text-slate-300 px-2 py-1 rounded border border-slate-700/60 transition">AMZN AWS 2023</button>
+            <button onclick="setQuery('What was Apple\\'s revenue from commercial rocket launches in 2023?')" class="text-[11px] bg-rose-950/40 hover:bg-rose-900/50 text-rose-300 px-2 py-1 rounded border border-rose-800/40 transition">Negative Test (Hallucination Guard)</button>
+          </div>
+        </div>
+
+        <!-- Pipeline Mode Selector -->
+        <div class="pt-2 border-t border-slate-800 grid grid-cols-2 gap-3">
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1 font-semibold">Retrieval Architecture</label>
+            <select id="mode-select" class="w-full bg-slate-900 border border-slate-700 rounded-lg p-2 text-xs text-slate-200 focus:outline-none focus:border-blue-500">
+              <option value="hybrid_rerank">Hybrid + Cross-Encoder (Best)</option>
+              <option value="hybrid">Hybrid (BM25 + Dense RRF)</option>
+              <option value="bm25_only">BM25 Sparse Only</option>
+              <option value="dense_only">Dense FAISS Only</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[11px] uppercase tracking-wider text-slate-400 mb-1 font-semibold">Execution Mode</label>
+            <div class="flex items-center h-9 space-x-2">
+              <label class="inline-flex items-center cursor-pointer">
+                <input type="checkbox" id="stream-toggle" class="sr-only peer" checked>
+                <div class="w-9 h-5 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-600"></div>
+                <span class="ml-2 text-xs text-slate-300">SSE Stream</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Action Button -->
+        <button id="search-btn" onclick="executeSearch()" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-medium py-2.5 rounded-lg text-sm shadow-lg shadow-blue-500/20 transition flex items-center justify-center gap-2">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <span>Execute Grounded Query</span>
+        </button>
+      </div>
+
+      <!-- Filters Detected -->
+      <div class="glass rounded-xl p-4 shadow-xl space-y-2">
+        <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-2">
+          <i class="fa-solid fa-filter text-blue-400"></i> Metadata Constraints
+        </span>
+        <div id="filter-chips" class="flex flex-wrap gap-2 text-xs text-slate-300">
+          <span class="bg-slate-800 px-2.5 py-1 rounded-md border border-slate-700 font-mono text-[11px]">Auto-detect from query</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Results & Citations Column -->
+    <div class="lg:col-span-7 space-y-6">
+
+      <!-- Grounded Answer Card -->
+      <div class="glass rounded-xl p-6 shadow-xl space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div class="flex items-center space-x-2">
+            <span class="h-2.5 w-2.5 rounded-full bg-blue-500"></span>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-200">Grounded Synthesis & Citations</h2>
+          </div>
+          <div id="latency-pill" class="hidden text-[11px] font-mono bg-slate-800 text-slate-400 px-2.5 py-1 rounded-full border border-slate-700">
+            <!-- Latencies injected dynamically -->
+          </div>
+        </div>
+
+        <div id="answer-box" class="text-sm text-slate-200 leading-relaxed min-h-[100px] whitespace-pre-wrap">
+          <div class="text-slate-500 italic flex items-center gap-2 h-24 justify-center">
+            <i class="fa-regular fa-comment-dots text-lg"></i>
+            <span>Submit a query or select a quick prompt to view the grounded answer.</span>
+          </div>
+        </div>
+
+        <!-- Inline Citations List -->
+        <div id="citations-container" class="hidden pt-3 border-t border-slate-800 space-y-2">
+          <span class="text-xs font-semibold uppercase tracking-wider text-slate-400 flex items-center gap-1.5">
+            <i class="fa-solid fa-link text-blue-400"></i> Document Citations
+          </span>
+          <div id="citations-list" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+
+      <!-- Retrieved Source Chunks Tabs & Details -->
+      <div class="glass rounded-xl p-6 shadow-xl space-y-4">
+        <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-layer-group text-slate-400"></i>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-200">Retrieved Context Chunks (Top-K)</h2>
+          </div>
+          <span id="chunk-count" class="text-xs text-slate-400 font-mono">0 Chunks</span>
+        </div>
+
+        <div id="chunks-container" class="space-y-3 max-h-[420px] overflow-y-auto custom-scroll pr-1">
+          <div class="text-xs text-slate-500 italic text-center py-8">
+            Retrieved chunks with table formatting and similarity scores will appear here.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Benchmark Ablation Modal -->
+  <div id="ablation-modal" class="hidden fixed inset-0 bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div class="glass bg-slate-900 border border-slate-700 max-w-4xl w-full rounded-2xl p-6 shadow-2xl space-y-5 max-h-[90vh] flex flex-col">
+      <div class="flex items-center justify-between border-b border-slate-800 pb-4">
+        <div>
+          <h3 class="text-base font-bold text-white flex items-center gap-2">
+            <i class="fa-solid fa-chart-simple text-blue-400"></i>
+            Retrieval & Generation Ablation Benchmark
+          </h3>
+          <p class="text-xs text-slate-400">Ablation study across 75 test queries comparing BM25, FAISS, RRF, and Cross-Encoder</p>
+        </div>
+        <button onclick="toggleAblationModal()" class="text-slate-400 hover:text-white text-lg">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto custom-scroll">
+        <div id="ablation-table-container" class="table-container text-xs">
+          <div class="py-12 text-center text-slate-400">
+            <i class="fa-solid fa-spinner fa-spin text-2xl text-blue-500 mb-3"></i>
+            <p>Running live evaluation suite across test questions...</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex justify-end pt-3 border-t border-slate-800">
+        <button onclick="toggleAblationModal()" class="bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs px-4 py-2 rounded-lg transition">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setQuery(text) {
+      document.getElementById('query-input').value = text;
+      executeSearch();
+    }
+
+    function clearQuery() {
+      document.getElementById('query-input').value = '';
+      document.getElementById('answer-box').innerHTML = '<div class="text-slate-500 italic flex items-center gap-2 h-24 justify-center"><i class="fa-regular fa-comment-dots text-lg"></i><span>Submit a query or select a quick prompt to view the grounded answer.</span></div>';
+      document.getElementById('citations-container').classList.add('hidden');
+      document.getElementById('chunks-container').innerHTML = '<div class="text-xs text-slate-500 italic text-center py-8">Retrieved chunks with table formatting and similarity scores will appear here.</div>';
+      document.getElementById('latency-pill').classList.add('hidden');
+    }
+
+    async function executeSearch() {
+      const query = document.getElementById('query-input').value.trim();
+      if (!query) return;
+
+      const mode = document.getElementById('mode-select').value;
+      const stream = document.getElementById('stream-toggle').checked;
+      const searchBtn = document.getElementById('search-btn');
+      const answerBox = document.getElementById('answer-box');
+      const latencyPill = document.getElementById('latency-pill');
+      const citationsCont = document.getElementById('citations-container');
+      const citationsList = document.getElementById('citations-list');
+      const chunksContainer = document.getElementById('chunks-container');
+
+      searchBtn.disabled = true;
+      searchBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i><span>Analyzing & Retrieving...</span>';
+      answerBox.innerHTML = '<span class="text-blue-400 animate-pulse font-mono text-xs">Searching financial filings & synthesizing grounded response...</span>';
+      latencyPill.classList.add('hidden');
+      citationsCont.classList.add('hidden');
+      citationsList.innerHTML = '';
+
+      try {
+        if (stream) {
+          // Streaming SSE
+          const sse = new EventSource(`/query/stream?query=${encodeURIComponent(query)}&mode=${mode}`);
+          let accumulated = '';
+          answerBox.innerHTML = '';
+
+          sse.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            if (!data.done) {
+              accumulated += data.token;
+              answerBox.innerText = accumulated;
+            } else {
+              sse.close();
+              searchBtn.disabled = false;
+              searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i><span>Execute Grounded Query</span>';
+              if (data.citations && data.citations.length > 0) {
+                renderCitations(data.citations);
+              }
+              // Also fetch metadata & chunks via POST
+              fetchChunksOnly(query, mode);
+            }
+          };
+
+          sse.onerror = () => {
+            sse.close();
+            fetchFallback(query, mode);
+          };
+        } else {
+          await fetchFallback(query, mode);
+        }
+      } catch (err) {
+        answerBox.innerHTML = `<span class="text-rose-400">Error: ${err.message}</span>`;
+        searchBtn.disabled = false;
+        searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i><span>Execute Grounded Query</span>';
+      }
+    }
+
+    async function fetchFallback(query, mode) {
+      const resp = await fetch('/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, mode, top_k: 5 })
+      });
+      const data = await resp.json();
+      renderFullResponse(data);
+      const searchBtn = document.getElementById('search-btn');
+      searchBtn.disabled = false;
+      searchBtn.innerHTML = '<i class="fa-solid fa-magnifying-glass"></i><span>Execute Grounded Query</span>';
+    }
+
+    async function fetchChunksOnly(query, mode) {
+      const resp = await fetch('/query', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query, mode, top_k: 5 })
+      });
+      const data = await resp.json();
+      renderLatency(data.latency);
+      renderChunks(data.retrieved_chunks);
+      renderFilters(data.applied_filters);
+    }
+
+    function renderFullResponse(data) {
+      const answerBox = document.getElementById('answer-box');
+      answerBox.innerText = data.answer;
+      renderLatency(data.latency);
+      renderCitations(data.citations);
+      renderChunks(data.retrieved_chunks);
+      renderFilters(data.applied_filters);
+    }
+
+    function renderLatency(lat) {
+      if (!lat) return;
+      const pill = document.getElementById('latency-pill');
+      pill.innerHTML = `Retrieve: <span class="text-blue-400">${lat.retrieval_ms}ms</span> | Rerank: <span class="text-indigo-400">${lat.rerank_ms}ms</span> | Gen: <span class="text-emerald-400">${lat.generation_ms}ms</span> | Total: <span class="text-amber-400 font-bold">${lat.total_e2e_ms || lat.total_ms}ms</span>`;
+      pill.classList.remove('hidden');
+    }
+
+    function renderFilters(filters) {
+      const container = document.getElementById('filter-chips');
+      if (!filters || Object.keys(filters).length === 0) {
+        container.innerHTML = '<span class="bg-slate-800 text-slate-400 px-2 py-0.5 rounded text-[11px]">No specific metadata constraint</span>';
+        return;
+      }
+      container.innerHTML = Object.entries(filters).map(([k, v]) => `
+        <span class="bg-blue-950/60 text-blue-300 border border-blue-800/60 px-2 py-0.5 rounded text-[11px] font-mono">
+          ${k}: <b>${v}</b>
+        </span>
+      `).join('');
+    }
+
+    function renderCitations(citations) {
+      if (!citations || citations.length === 0) return;
+      const cont = document.getElementById('citations-container');
+      const list = document.getElementById('citations-list');
+      list.innerHTML = citations.map(c => `
+        <span class="bg-slate-800 hover:bg-slate-700 text-blue-300 border border-slate-700 px-2.5 py-1 rounded-md text-xs font-mono flex items-center gap-1.5 cursor-pointer">
+          <i class="fa-regular fa-file-lines text-[10px]"></i>
+          <span>${c.doc} &bull; ${c.section}</span>
+        </span>
+      `).join('');
+      cont.classList.remove('hidden');
+    }
+
+    function renderChunks(chunks) {
+      const container = document.getElementById('chunks-container');
+      const count = document.getElementById('chunk-count');
+      if (!chunks || chunks.length === 0) {
+        container.innerHTML = '<div class="text-xs text-slate-500 italic text-center py-4">No chunks found</div>';
+        count.innerText = '0 Chunks';
+        return;
+      }
+
+      count.innerText = `${chunks.length} Chunks`;
+      container.innerHTML = chunks.map((item, idx) => {
+        const c = item.chunk;
+        const score = item.score;
+        const meta = c.metadata || {};
+        const isTable = meta.is_table;
+
+        return `
+          <div class="bg-slate-900/90 border border-slate-800 rounded-lg p-3.5 space-y-2 hover:border-slate-700 transition">
+            <div class="flex items-center justify-between text-[11px] text-slate-400">
+              <span class="font-mono text-blue-400 font-semibold">#${idx+1} [${c.document_id}]</span>
+              <div class="flex items-center gap-2">
+                ${isTable ? '<span class="bg-amber-500/10 text-amber-400 border border-amber-500/20 px-1.5 py-0.5 rounded text-[10px]">Financial Table</span>' : ''}
+                <span class="font-mono bg-slate-800 text-slate-300 px-2 py-0.5 rounded border border-slate-700">Score: ${score}</span>
+              </div>
+            </div>
+            <div class="text-[11px] text-slate-400 font-mono">
+              Section: <span class="text-slate-300">${meta.section_title || 'General'}</span>
+            </div>
+            <div class="text-xs text-slate-300 font-mono bg-slate-950/60 p-2.5 rounded border border-slate-800/80 whitespace-pre-wrap leading-relaxed max-h-48 overflow-y-auto custom-scroll">
+              ${c.text}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    async function toggleAblationModal() {
+      const modal = document.getElementById('ablation-modal');
+      modal.classList.toggle('hidden');
+      if (!modal.classList.contains('hidden')) {
+        const cont = document.getElementById('ablation-table-container');
+        cont.innerHTML = '<div class="py-12 text-center text-slate-400"><i class="fa-solid fa-spinner fa-spin text-2xl text-blue-500 mb-3"></i><p>Executing live ablation study across 75 test questions (BM25, FAISS, RRF, Rerank)...</p></div>';
+        try {
+          const resp = await fetch('/evaluate');
+          const data = await resp.json();
+          renderAblationTable(data.results);
+        } catch (err) {
+          cont.innerHTML = `<span class="text-rose-400">Failed to load benchmark: ${err.message}</span>`;
+        }
+      }
+    }
+
+    function renderAblationTable(res) {
+      const cont = document.getElementById('ablation-table-container');
+      const modeLabels = {
+        'bm25_only': 'BM25 Sparse Only',
+        'dense_only': 'Dense FAISS Only',
+        'hybrid': 'Hybrid (BM25 + Dense RRF)',
+        'hybrid_rerank': 'Hybrid + Cross-Encoder Rerank (Full Pipeline)'
+      };
+
+      let html = `
+        <table class="w-full text-left">
+          <thead>
+            <tr>
+              <th>Architecture</th>
+              <th>Recall@1</th>
+              <th>Recall@3</th>
+              <th>Recall@5</th>
+              <th>MRR</th>
+              <th>NDCG@5</th>
+              <th>Faithfulness</th>
+              <th>F1 Score</th>
+              <th>Retrieval</th>
+              <th>Rerank</th>
+              <th>Total Latency</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      for (const [mode, d] of Object.entries(res)) {
+        const isBest = mode === 'hybrid_rerank';
+        html += `
+          <tr class="${isBest ? 'bg-blue-950/40 font-semibold text-blue-200' : ''}">
+            <td class="font-medium">${modeLabels[mode] || mode}</td>
+            <td class="font-mono">${d['recall@1']}</td>
+            <td class="font-mono">${d['recall@3']}</td>
+            <td class="font-mono">${d['recall@5']}</td>
+            <td class="font-mono">${d['mrr']}</td>
+            <td class="font-mono">${d['ndcg@5']}</td>
+            <td class="font-mono text-emerald-400">${(d['faithfulness'] * 100).toFixed(1)}%</td>
+            <td class="font-mono">${d['answer_correctness_f1']}</td>
+            <td class="font-mono text-slate-400">${d['latency_retrieval_ms']}ms</td>
+            <td class="font-mono text-slate-400">${d['latency_rerank_ms']}ms</td>
+            <td class="font-mono text-amber-400 font-bold">${d['latency_total_ms']}ms</td>
+          </tr>
+        `;
+      }
+
+      html += '</tbody></table>';
+      cont.innerHTML = html;
+    }
+  </script>
+</body>
+</html>
+

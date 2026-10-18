@@ -1,0 +1,18 @@
+{
+  "document_id": "BAC_10-K_2023",
+  "metadata": {
+    "ticker": "BAC",
+    "company": "Bank of America Corp",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Financial Highlights (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Total revenue, net of interest expense | $ 98,581 | $ 94,950 |\n| Net income | $ 26,515 | $ 27,528 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Financial Highlights (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Total revenue, net of interest expense | $ 98,581 | $ 94,950 |\n| Net income | $ 26,515 | $ 27,528 |\n\n\n"
+}

@@ -1,0 +1,24 @@
+{
+  "document_id": "TSLA_10-K_2023",
+  "metadata": {
+    "ticker": "TSLA",
+    "company": "Tesla Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_Intro",
+      "title": "Introductory Information",
+      "content": "ITEM 7. MD&A\n\nAutomotive regulatory credits accounted for $1,790 million in 2023 compared to $1,607 million in 2022. Total automotive gross margin was 18.2% in 2023.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_1",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Total automotive revenues | $ 82,419 | $ 71,462 |\n| Automotive regulatory credits | $ 1,790 | $ 1,607 |\n| Energy generation and storage | $ 6,035 | $ 3,909 |\n| Services and other | $ 8,319 | $ 6,091 |\n| Total revenues | $ 96,773 | $ 81,462 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 7. MD&A\n\nAutomotive regulatory credits accounted for $1,790 million in 2023 compared to $1,607 million in 2022. Total automotive gross margin was 18.2% in 2023.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Total automotive revenues | $ 82,419 | $ 71,462 |\n| Automotive regulatory credits | $ 1,790 | $ 1,607 |\n| Energy generation and storage | $ 6,035 | $ 3,909 |\n| Services and other | $ 8,319 | $ 6,091 |\n| Total revenues | $ 96,773 | $ 81,462 |\n\n\n"
+}

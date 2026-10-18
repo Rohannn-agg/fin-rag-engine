@@ -1,0 +1,24 @@
+{
+  "document_id": "NVDA_Transcript_Q3_2024",
+  "metadata": {
+    "ticker": "NVDA",
+    "company": "NVIDIA Corp",
+    "fiscal_year": 2024,
+    "doc_type": "Transcript"
+  },
+  "sections": [
+    {
+      "section_id": "Section_ExecRemarks",
+      "title": "Executive Remarks & Presentation",
+      "content": "EXECUTIVE REMARKS & PRESENTATION:\n        Jensen Huang (CEO): Accelerated computing and generative AI have reached the tipping point. Demand is surging worldwide across companies, industries and nations. Our Data Center platform is powered by increasingly diverse drivers \u2014 demand for data processing, training and inference from large cloud service providers and GPU specialized providers, as well as from enterprise software and consumer internet companies.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_AnalystQA",
+      "title": "Analyst Q&A Session",
+      "content": "QUESTION AND ANSWER SECTION:\n        Toshiya Hari (Analyst): Jensen, how do you see Blackwell transition impacting supply?\n        Jensen Huang: The demand for Blackwell is incredible. Supply will be constrained through the coming fiscal year as customer demand exceeds available capacity.",
+      "tables_count": 0
+    }
+  ],
+  "full_text": "\n        EXECUTIVE REMARKS & PRESENTATION:\n        Jensen Huang (CEO): Accelerated computing and generative AI have reached the tipping point. Demand is surging worldwide across companies, industries and nations. Our Data Center platform is powered by increasingly diverse drivers \u2014 demand for data processing, training and inference from large cloud service providers and GPU specialized providers, as well as from enterprise software and consumer internet companies.\n\n        QUESTION AND ANSWER SECTION:\n        Toshiya Hari (Analyst): Jensen, how do you see Blackwell transition impacting supply?\n        Jensen Huang: The demand for Blackwell is incredible. Supply will be constrained through the coming fiscal year as customer demand exceeds available capacity.\n        "
+}

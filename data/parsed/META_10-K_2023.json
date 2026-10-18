@@ -1,0 +1,24 @@
+{
+  "document_id": "META_10-K_2023",
+  "metadata": {
+    "ticker": "META",
+    "company": "Meta Platforms Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 7. MD&A",
+      "content": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nIn 2023, ad impressions delivered across our Family of Apps increased by 28% year-over-year. Reality Labs expenses were $17.97 billion, resulting in an operating loss of $(16,120) million.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_2",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Consolidated Financial Highlights (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Family of Apps revenue | $ 133,015 | $ 114,450 |\n| Reality Labs revenue | $ 1,896 | $ 2,159 |\n| Total revenue | $ 134,902 | $ 116,609 |\n| Reality Labs operating loss | $ (16,120) | $ (13,717) |\n| Net income | $ 39,098 | $ 23,200 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nIn 2023, ad impressions delivered across our Family of Apps increased by 28% year-over-year. Reality Labs expenses were $17.97 billion, resulting in an operating loss of $(16,120) million.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Consolidated Financial Highlights (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Family of Apps revenue | $ 133,015 | $ 114,450 |\n| Reality Labs revenue | $ 1,896 | $ 2,159 |\n| Total revenue | $ 134,902 | $ 116,609 |\n| Reality Labs operating loss | $ (16,120) | $ (13,717) |\n| Net income | $ 39,098 | $ 23,200 |\n\n\n"
+}

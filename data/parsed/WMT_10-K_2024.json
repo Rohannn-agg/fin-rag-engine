@@ -1,0 +1,24 @@
+{
+  "document_id": "WMT_10-K_2024",
+  "metadata": {
+    "ticker": "WMT",
+    "company": "Walmart Inc.",
+    "fiscal_year": 2024,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_Intro",
+      "title": "Introductory Information",
+      "content": "ITEM 7. MD&A\n\nGlobal eCommerce sales increased 23% in fiscal 2024, surpassing $100 billion. Walmart U.S. comp sales grew 5.6%.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_1",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues (in millions) | 2024 | 2023 |\n| --- | --- | --- |\n| Net sales | $ 642,637 | $ 605,881 |\n| Membership and other income | $ 5,488 | $ 5,408 |\n| Total revenues | $ 648,125 | $ 611,289 |\n| Operating income | $ 27,011 | $ 20,428 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 7. MD&A\n\nGlobal eCommerce sales increased 23% in fiscal 2024, surpassing $100 billion. Walmart U.S. comp sales grew 5.6%.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues (in millions) | 2024 | 2023 |\n| --- | --- | --- |\n| Net sales | $ 642,637 | $ 605,881 |\n| Membership and other income | $ 5,488 | $ 5,408 |\n| Total revenues | $ 648,125 | $ 611,289 |\n| Operating income | $ 27,011 | $ 20,428 |\n\n\n"
+}

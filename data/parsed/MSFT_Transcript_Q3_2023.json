@@ -1,0 +1,24 @@
+{
+  "document_id": "MSFT_Transcript_Q3_2023",
+  "metadata": {
+    "ticker": "MSFT",
+    "company": "Microsoft Corp",
+    "fiscal_year": 2023,
+    "doc_type": "Transcript"
+  },
+  "sections": [
+    {
+      "section_id": "Section_ExecRemarks",
+      "title": "Executive Remarks & Presentation",
+      "content": "EXECUTIVE REMARKS & PRESENTATION:\n        Satya Nadella (CEO): We had a tremendous close to the fiscal year. Microsoft Cloud annual revenue surpassed $110 billion, up 27% in constant currency. Azure OpenAI Service now has more than 11,00 organizations using the service, up from 4,500 just last quarter. Organizations are choosing Azure because of our leading infrastructure and enterprise-grade security.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_AnalystQA",
+      "title": "Analyst Q&A Session",
+      "content": "QUESTION AND ANSWER SECTION:\n        Mark Murphy (Analyst): Satya, what is the impact of Copilot monetization?\n        Satya Nadella: Copilot is being rapidly adopted across GitHub, Microsoft 365, and Power Platform. GitHub Copilot has over 1 million paying users.",
+      "tables_count": 0
+    }
+  ],
+  "full_text": "\n        EXECUTIVE REMARKS & PRESENTATION:\n        Satya Nadella (CEO): We had a tremendous close to the fiscal year. Microsoft Cloud annual revenue surpassed $110 billion, up 27% in constant currency. Azure OpenAI Service now has more than 11,00 organizations using the service, up from 4,500 just last quarter. Organizations are choosing Azure because of our leading infrastructure and enterprise-grade security.\n\n        QUESTION AND ANSWER SECTION:\n        Mark Murphy (Analyst): Satya, what is the impact of Copilot monetization?\n        Satya Nadella: Copilot is being rapidly adopted across GitHub, Microsoft 365, and Power Platform. GitHub Copilot has over 1 million paying users.\n        "
+}

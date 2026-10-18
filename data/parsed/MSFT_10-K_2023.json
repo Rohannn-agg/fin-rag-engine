@@ -1,0 +1,30 @@
+{
+  "document_id": "MSFT_10-K_2023",
+  "metadata": {
+    "ticker": "MSFT",
+    "company": "Microsoft Corp",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 1. Business",
+      "content": "ITEM 1. BUSINESS\n\nMicrosoft develops and supports software, services, devices, and solutions. Our three operating segments are Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_2",
+      "title": "Item 7. MD&A",
+      "content": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nRevenue increased $13.7 billion or 7% driven by growth in Intelligent Cloud and Productivity and Business Processes. Operating income increased 6% to $88,523 million.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_3",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Segment Revenue (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Productivity and Business Processes | $ 69,274 | $ 63,364 |\n| Intelligent Cloud | $ 87,907 | $ 75,251 |\n| More Personal Computing | $ 54,734 | $ 59,579 |\n| Total Revenue | $ 211,915 | $ 198,194 |\n| Operating income | $ 88,523 | $ 83,383 |\n| Net income | $ 72,361 | $ 72,738 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 1. BUSINESS\n\nMicrosoft develops and supports software, services, devices, and solutions. Our three operating segments are Productivity and Business Processes, Intelligent Cloud, and More Personal Computing.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nRevenue increased $13.7 billion or 7% driven by growth in Intelligent Cloud and Productivity and Business Processes. Operating income increased 6% to $88,523 million.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Segment Revenue (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Productivity and Business Processes | $ 69,274 | $ 63,364 |\n| Intelligent Cloud | $ 87,907 | $ 75,251 |\n| More Personal Computing | $ 54,734 | $ 59,579 |\n| Total Revenue | $ 211,915 | $ 198,194 |\n| Operating income | $ 88,523 | $ 83,383 |\n| Net income | $ 72,361 | $ 72,738 |\n\n\n"
+}

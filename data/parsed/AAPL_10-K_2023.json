@@ -1,0 +1,36 @@
+{
+  "document_id": "AAPL_10-K_2023",
+  "metadata": {
+    "ticker": "AAPL",
+    "company": "Apple Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 1. Business",
+      "content": "ITEM 1. BUSINESS\n\nApple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories, and sells a variety of related services. Products include iPhone, Mac, iPad, and Wearables, Home and Accessories. Services include Advertising, AppleCare, Cloud Services, Digital Content, and Payment Services.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_2",
+      "title": "Item 1A. Risk Factors",
+      "content": "ITEM 1A. RISK FACTORS\n\nGlobal economic conditions, geopolitical conflicts, and trade disputes could adversely affect the Company's business. In particular, substantially all of the Company's manufacturing is performed by outsourced partners located primarily in Asia, including mainland China, India, and Vietnam. Any disruption at these manufacturing facilities could severely limit supply.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_3",
+      "title": "Item 7. MD&A",
+      "content": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nTotal net sales decreased 3% or $11.0 billion during 2023 compared to 2022. Products net sales decreased due to lower sales of Mac and iPad. Services net sales increased 9% driven by growth in advertising, App Store, and cloud services.\n\nResearch and development expense was $29,915 million in 2023, compared to $26,251 million in 2022, representing an increase of 14% to support next-generation silicon, AI technologies, and visionOS platform development.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_4",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA\n\nConsolidated Statements of Operations (in millions):\n\n\n| Net Sales by Category | 2023 | 2022 | 2021 |\n| --- | --- | --- | --- |\n| iPhone | $ 200,583 | $ 205,489 | $ 191,973 |\n| Mac | $ 29,357 | $ 40,177 | $ 35,190 |\n| iPad | $ 28,300 | $ 29,292 | $ 31,862 |\n| Wearables, Home and Accessories | $ 39,845 | $ 41,241 | $ 38,367 |\n| Services | $ 85,200 | $ 78,129 | $ 68,425 |\n| Total net sales | $ 383,285 | $ 394,328 | $ 365,817 |\n| Total cost of sales | $ 214,137 | $ 223,546 | $ 212,981 |\n| Gross margin | $ 169,148 | $ 170,782 | $ 152,836 |\n| Operating income | $ 114,301 | $ 119,437 | $ 108,949 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 1. BUSINESS\n\nApple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories, and sells a variety of related services. Products include iPhone, Mac, iPad, and Wearables, Home and Accessories. Services include Advertising, AppleCare, Cloud Services, Digital Content, and Payment Services.\n\nITEM 1A. RISK FACTORS\n\nGlobal economic conditions, geopolitical conflicts, and trade disputes could adversely affect the Company's business. In particular, substantially all of the Company's manufacturing is performed by outsourced partners located primarily in Asia, including mainland China, India, and Vietnam. Any disruption at these manufacturing facilities could severely limit supply.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nTotal net sales decreased 3% or $11.0 billion during 2023 compared to 2022. Products net sales decreased due to lower sales of Mac and iPad. Services net sales increased 9% driven by growth in advertising, App Store, and cloud services.\n\nResearch and development expense was $29,915 million in 2023, compared to $26,251 million in 2022, representing an increase of 14% to support next-generation silicon, AI technologies, and visionOS platform development.\n\nITEM 8. FINANCIAL STATEMENTS AND SUPPLEMENTARY DATA\n\nConsolidated Statements of Operations (in millions):\n\n\n| Net Sales by Category | 2023 | 2022 | 2021 |\n| --- | --- | --- | --- |\n| iPhone | $ 200,583 | $ 205,489 | $ 191,973 |\n| Mac | $ 29,357 | $ 40,177 | $ 35,190 |\n| iPad | $ 28,300 | $ 29,292 | $ 31,862 |\n| Wearables, Home and Accessories | $ 39,845 | $ 41,241 | $ 38,367 |\n| Services | $ 85,200 | $ 78,129 | $ 68,425 |\n| Total net sales | $ 383,285 | $ 394,328 | $ 365,817 |\n| Total cost of sales | $ 214,137 | $ 223,546 | $ 212,981 |\n| Gross margin | $ 169,148 | $ 170,782 | $ 152,836 |\n| Operating income | $ 114,301 | $ 119,437 | $ 108,949 |\n\n\n"
+}

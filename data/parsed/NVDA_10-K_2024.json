@@ -1,0 +1,30 @@
+{
+  "document_id": "NVDA_10-K_2024",
+  "metadata": {
+    "ticker": "NVDA",
+    "company": "NVIDIA Corp",
+    "fiscal_year": 2024,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 1. Business",
+      "content": "ITEM 1. BUSINESS\n\nNVIDIA pioneered accelerated computing to help solve the most challenging computational problems. We specialize in GPUs, DPUs, and full-stack software platforms powering AI supercomputing.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_2",
+      "title": "Item 7. MD&A",
+      "content": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal year 2024 was a transformative year. Total revenue increased 126% to $60,922 million, driven by exceptional growth in our Data Center platform following the enterprise inflection point for generative AI.\n\nGross margin expanded significantly to 72.7% from 56.9% in fiscal 2023, reflecting higher Data Center architecture sales.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_3",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenue by Platform (in millions) | 2024 | 2023 |\n| --- | --- | --- |\n| Data Center | $ 47,525 | $ 15,013 |\n| Gaming | $ 10,447 | $ 9,067 |\n| Professional Visualization | $ 1,553 | $ 1,544 |\n| Automotive | $ 1,091 | $ 903 |\n| OEM and Other | $ 306 | $ 447 |\n| Total revenue | $ 60,922 | $ 26,974 |\n| Gross margin | 72.7% | 56.9% |\n| Operating income | $ 32,972 | $ 4,224 |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 1. BUSINESS\n\nNVIDIA pioneered accelerated computing to help solve the most challenging computational problems. We specialize in GPUs, DPUs, and full-stack software platforms powering AI supercomputing.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nFiscal year 2024 was a transformative year. Total revenue increased 126% to $60,922 million, driven by exceptional growth in our Data Center platform following the enterprise inflection point for generative AI.\n\nGross margin expanded significantly to 72.7% from 56.9% in fiscal 2023, reflecting higher Data Center architecture sales.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenue by Platform (in millions) | 2024 | 2023 |\n| --- | --- | --- |\n| Data Center | $ 47,525 | $ 15,013 |\n| Gaming | $ 10,447 | $ 9,067 |\n| Professional Visualization | $ 1,553 | $ 1,544 |\n| Automotive | $ 1,091 | $ 903 |\n| OEM and Other | $ 306 | $ 447 |\n| Total revenue | $ 60,922 | $ 26,974 |\n| Gross margin | 72.7% | 56.9% |\n| Operating income | $ 32,972 | $ 4,224 |\n\n\n"
+}

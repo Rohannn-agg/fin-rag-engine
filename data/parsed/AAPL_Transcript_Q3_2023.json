@@ -1,0 +1,24 @@
+{
+  "document_id": "AAPL_Transcript_Q3_2023",
+  "metadata": {
+    "ticker": "AAPL",
+    "company": "Apple Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "Transcript"
+  },
+  "sections": [
+    {
+      "section_id": "Section_ExecRemarks",
+      "title": "Executive Remarks & Presentation",
+      "content": "EXECUTIVE REMARKS & PRESENTATION:\n        Tim Cook (CEO): Good afternoon, everyone. Today Apple is reporting revenue of $81.8 billion for the June quarter. We hit an all-time revenue record in India, growing strong double digits, driven by robust iPhone adoption and the opening of our first two retail stores in Mumbai and Delhi. We continue to invest heavily in artificial intelligence and machine learning, which are foundational technologies woven into virtually every product we build.\n\n        Luca Maestri (CFO): Our Services revenue set an all-time record of $21.2 billion, up 8% year-over-year. We reached over 1 billion paid subscriptions across the services on our platform.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_AnalystQA",
+      "title": "Analyst Q&A Session",
+      "content": "QUESTION AND ANSWER SECTION:\n        Shannon Cross (Analyst): Tim, can you discuss the trajectory of AI spending and silicon development?\n        Tim Cook: We view AI and ML as fundamental core technologies, and we have been doing research across a wide range of AI technologies, including generative AI, for years.",
+      "tables_count": 0
+    }
+  ],
+  "full_text": "\n        EXECUTIVE REMARKS & PRESENTATION:\n        Tim Cook (CEO): Good afternoon, everyone. Today Apple is reporting revenue of $81.8 billion for the June quarter. We hit an all-time revenue record in India, growing strong double digits, driven by robust iPhone adoption and the opening of our first two retail stores in Mumbai and Delhi. We continue to invest heavily in artificial intelligence and machine learning, which are foundational technologies woven into virtually every product we build.\n\n        Luca Maestri (CFO): Our Services revenue set an all-time record of $21.2 billion, up 8% year-over-year. We reached over 1 billion paid subscriptions across the services on our platform.\n\n        QUESTION AND ANSWER SECTION:\n        Shannon Cross (Analyst): Tim, can you discuss the trajectory of AI spending and silicon development?\n        Tim Cook: We view AI and ML as fundamental core technologies, and we have been doing research across a wide range of AI technologies, including generative AI, for years.\n        "
+}

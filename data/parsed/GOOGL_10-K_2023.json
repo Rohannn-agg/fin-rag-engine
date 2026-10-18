@@ -1,0 +1,30 @@
+{
+  "document_id": "GOOGL_10-K_2023",
+  "metadata": {
+    "ticker": "GOOGL",
+    "company": "Alphabet Inc.",
+    "fiscal_year": 2023,
+    "doc_type": "10-K"
+  },
+  "sections": [
+    {
+      "section_id": "Section_1",
+      "title": "Item 1. Business",
+      "content": "ITEM 1. BUSINESS\n\nAlphabet is a collection of businesses \u2014 the largest of which is Google. Google segments include Google Services and Google Cloud.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_2",
+      "title": "Item 7. MD&A",
+      "content": "ITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nGoogle Cloud demonstrated strong operating leverage, achieving operating income of $1,716 million in 2023 compared to an operating loss of $(1,864) million in 2022.",
+      "tables_count": 0
+    },
+    {
+      "section_id": "Section_3",
+      "title": "Item 8. Financial Statements",
+      "content": "ITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues and Operating Income (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Google Search & other | $ 175,032 | $ 162,450 |\n| YouTube ads | $ 31,510 | $ 29,242 |\n| Google Network | $ 31,315 | $ 32,780 |\n| Google advertising | $ 237,857 | $ 224,472 |\n| Google Services total | $ 272,504 | $ 253,528 |\n| Google Cloud | $ 33,088 | $ 26,280 |\n| Other Bets | $ 1,527 | $ 1,068 |\n| Total revenues | $ 307,394 | $ 282,836 |\n| Google Cloud operating income (loss) | $ 1,716 | $ (1,864) |",
+      "tables_count": 2
+    }
+  ],
+  "full_text": "ITEM 1. BUSINESS\n\nAlphabet is a collection of businesses \u2014 the largest of which is Google. Google segments include Google Services and Google Cloud.\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS\n\nGoogle Cloud demonstrated strong operating leverage, achieving operating income of $1,716 million in 2023 compared to an operating loss of $(1,864) million in 2022.\n\nITEM 8. FINANCIAL STATEMENTS\n\n\n| Revenues and Operating Income (in millions) | 2023 | 2022 |\n| --- | --- | --- |\n| Google Search & other | $ 175,032 | $ 162,450 |\n| YouTube ads | $ 31,510 | $ 29,242 |\n| Google Network | $ 31,315 | $ 32,780 |\n| Google advertising | $ 237,857 | $ 224,472 |\n| Google Services total | $ 272,504 | $ 253,528 |\n| Google Cloud | $ 33,088 | $ 26,280 |\n| Other Bets | $ 1,527 | $ 1,068 |\n| Total revenues | $ 307,394 | $ 282,836 |\n| Google Cloud operating income (loss) | $ 1,716 | $ (1,864) |\n\n\n"
+}
